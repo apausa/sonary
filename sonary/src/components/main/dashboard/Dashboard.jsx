@@ -34,6 +34,7 @@ export default function Dashboard() {
     else {
       const newSongs = tracks.filter(({ album_name, artist_name, track_name }) => {
         const searchValues = [album_name, artist_name, track_name];
+
         return searchValues.toString().toLowerCase().includes(searchTerm.toLowerCase());
       });
       setFilterSong(newSongs);
