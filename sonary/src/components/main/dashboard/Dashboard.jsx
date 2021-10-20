@@ -53,7 +53,7 @@ export default function Dashboard() {
     <main className="dashboard">
       <section className="dashboard__top">
         <h1 className="dashboard__title">Top Chart</h1>
-        <input type="search" placeholder="  Search for a song!" data-testid="search-input" onChange={(event) => filterSongs(event.target.value)} className="dashboard__search" />
+        <input type="search" placeholder="Search for a song!" data-testid="search-input" onChange={(event) => filterSongs(event.target.value)} className="dashboard__search" />
       </section>
       <ul className="dashboard__bottom">
         {

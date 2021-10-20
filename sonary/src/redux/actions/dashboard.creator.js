@@ -1,5 +1,3 @@
-/* eslint-disable no-debugger */
-/* eslint-disable no-console */
 /* eslint-disable camelcase */
 /* eslint-disable import/prefer-default-export */
 import actionTypes from './actionTypes';

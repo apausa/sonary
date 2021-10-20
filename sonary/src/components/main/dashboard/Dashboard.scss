@@ -10,7 +10,7 @@ $verde: rgb(0, 229.5, 0);
 }
 
 .dashboard__top {
-    margin: 40px 160px 0px 160px;
+    margin: 0px 160px 0px 160px;
     display: flex; 
     justify-content: space-between;
     .dashboard__title {
@@ -23,11 +23,10 @@ $verde: rgb(0, 229.5, 0);
         border: solid 1px $gris90;
         background-color: $gris5;
         border-radius: 10px;
-        margin-right: 80;
+        padding-left: 10px;
     }
     .dashboard__search::placeholder{
         color: $gris90;
-        margin-left: 20px;
     }
 }
 
@@ -71,9 +70,6 @@ $verde: rgb(0, 229.5, 0);
 
 .list__track:hover {
     background-color: $gris10;
-    .bottom__track {
-        color: $verde;
-    }
 }
 
 .list__track:nth-child(1){

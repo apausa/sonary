@@ -1,6 +1,5 @@
-/* eslint-disable no-debugger */
 /* eslint-disable camelcase */
-/* eslint-disable no-console */
+
 import actionTypes from '../actions/actionTypes';
 import { initializeLocalStorage, saveFavouritesToLocalStorage } from '../actions/localStorage.creator';
 

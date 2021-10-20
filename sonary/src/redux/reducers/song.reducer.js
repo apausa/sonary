@@ -1,6 +1,3 @@
-/* eslint-disable no-debugger */
-/* eslint-disable no-console */
-/* eslint-disable camelcase */
 import actionTypes from '../actions/actionTypes';
 
 export default function songReducer(state = [], action) {
