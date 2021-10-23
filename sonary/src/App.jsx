@@ -10,7 +10,6 @@ import Dashboard from './components/main/dashboard/Dashboard';
 import Details from './components/main/details/Details';
 import Profile from './components/main/profile/Profile';
 import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
 import notFound from './components/notFound/notFound';
 
 function App() {
@@ -30,7 +29,6 @@ function App() {
             <Route path="/profile" component={Profile} />
             <Route component={notFound} />
           </Switch>
-          <Footer />
         </BrowserRouter>
       </Auth0Provider>
     </Provider>
