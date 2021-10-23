@@ -1,0 +1,138 @@
+@import "../../../utils/variables.scss";
+
+.dashboard {
+    padding-top: 32px;
+    .dashboard__top {
+        margin: 0 12.5vw;
+        height: 32px;
+    }
+    .dashboard__bottom {
+        margin: 16px 12.5vw 0 12.5vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.bottom__track {
+    width: 25vw;
+    max-height: 128px;
+    margin-bottom: 16px;
+}
+
+.bottom__track:nth-child(3n + 1) {
+    padding-right: 11px;
+}
+
+.bottom__track:nth-child(3n + 2) {
+    padding: 0 5px;
+}
+
+.bottom__track:nth-child(3n) {
+    padding-left: 11px;
+}
+
+// Input.
+
+.dashboard__search {
+    width: 75vw;
+    height: 32px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding-left: 8px;
+    border: 1px solid $pantoneCoolGray4C;
+    background-color: $pantoneCoolGray2C;
+    color: $pantoneNeutralBlackC;
+}
+
+.dashboard__search::placeholder {
+    color: $pantoneCoolGray8C;
+}
+
+// Track.
+
+.track__element {   
+    display: flex;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid $pantoneCoolGray4C;
+    .element__thumbnail {
+        min-width: 128px;
+        height: 128px;
+        border-radius: 8px;
+    }
+    .element__information {
+        height: 128px;
+        padding: 4px 32px 16px 8px;
+        font-weight: bold;
+        overflow: hidden;
+    }
+}
+
+.information__ranking {
+    color: $pantoneCoolGray8C;
+    font-size: 24px;
+}
+
+.information__track {
+    margin-top: 4px;
+    color: $pantoneNeutralBlackC;
+    font-size: 16px;
+}
+
+.information__artist {
+    color: $pantoneNeutralBlackC;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+// Selectors.
+
+.dashboard__search:focus {
+    outline: none;
+    background-color: $pantoneCoolGray1C;
+}
+
+.dashboard__search:hover {
+    background-color: $pantoneCoolGray1C;
+}
+
+.track__element:hover {   
+    background-color: $pantoneCoolGray1C;
+}
+
+// Button. 
+
+.track__button {
+    position: absolute;
+    margin-left: 22.3vw;
+    margin-top: 4px;
+}
+
+.button__fav {
+    width: 24px;
+    height: 24px; 
+    border-radius: 8px;
+    border: none;
+    background-color: #FFF;
+    border: 1px solid $pantoneCoolGray4C;
+    color: $pantoneCoolGray8C;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.button__fav:hover {
+    background-color: $pantoneCoolGray1C;
+}
+
+.button__fav--yes{
+    background-color: $pantone802C;
+    color: $pantoneCoolGray8C;
+}
+
+.button__fav--yes:hover {
+    background-color: $pantone802C;
+    color: $pantoneCoolGray8C;
+}

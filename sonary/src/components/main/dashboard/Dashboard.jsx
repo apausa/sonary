@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import actionTypes from '../../../redux/actions/actionTypes';
 import { loadDashboard } from '../../../redux/actions/dashboard.creator';
-import './Dashboard.scss';
+import './dashboardStyles.scss';
 
 export default function Dashboard() {
   const { tracks, favoriteTracks } = useSelector((store) => ({
@@ -26,7 +26,7 @@ export default function Dashboard() {
 
   function getFavClass(track) {
     const isFav = favoriteTracks.some((song) => song === track);
-    return isFav ? 'list__button--fav' : '';
+    return isFav ? 'button__fav--yes' : '';
   }
 
   function filterSongs(searchTerm) {
@@ -52,46 +52,41 @@ export default function Dashboard() {
   return (
     <main className="dashboard">
       <section className="dashboard__top">
-        <h1 className="dashboard__title">Top Chart</h1>
-        <input type="search" placeholder="Search for a song!" data-testid="search-input" onChange={(event) => filterSongs(event.target.value)} className="dashboard__search" />
+        <input type="search" placeholder="Search any song!" data-testid="search-input" onChange={(event) => filterSongs(event.target.value)} className="dashboard__search" />
       </section>
       <ul className="dashboard__bottom">
         {
-
             filteredSongs && filteredSongs.map((track) => {
               ranking += 1;
               return (
-                <li key={track.track_id} className="list__track">
-                  <button
-                    data-testid={`button-${track.track_id}`}
-                    type="button"
-                    className={`list__button ${getFavClass(track)}`}
-                    onClick={() => toggleFav(track)}
-                  >
-                    +
-                  </button>
-                  <Link className="track" to={`/details/${track.track_id}`}>
-                    <ul className="list__aux">
-                      <li className="track__thumbnail" style={{ backgroundColor: `#${randomColor()}` }}>
+                <li key={track.track_id} className="bottom__track">
+                  <ul>
+                    <li className="track__button">
+                      <button
+                        data-testid={`button-${track.track_id}`}
+                        type="button"
+                        className={`button__fav ${getFavClass(track)}`}
+                        onClick={() => toggleFav(track)}
+                      >
+                        +
+                      </button>
+                    </li>
+                    <Link className="track__element" to={`/details/${track.track_id}`}>
+                      <li className="element__thumbnail" style={{ backgroundColor: `#${randomColor()}` }}>
                         <img src="" alt="" />
                       </li>
                       <li>
-                        <ul className="track__information">
-                          <li className="information__top">
+                        <ul className="element__information">
+                          <li className="information__ranking">
                             #
                             {ranking}
                           </li>
-                          <li>
-                            <ul className="information__bottom">
-                              <li className="bottom__track">{track.track_name}</li>
-                              <li className="bottom__artist">{track.artist_name}</li>
-                            </ul>
-                          </li>
+                          <li className="information__track">{track.track_name}</li>
+                          <li className="information__artist">{track.artist_name}</li>
                         </ul>
                       </li>
-                      <li className="information__auxiliar" />
-                    </ul>
-                  </Link>
+                    </Link>
+                  </ul>
                 </li>
               );
             })

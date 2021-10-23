@@ -19,10 +19,9 @@ $verde: rgb(0, 229.5, 0);
 
 .details__information {
     width: 360px; 
-    height: 540px;
+    height: 580px;
     background-color: $gris5;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-radius: 10px;
     .details__figure {
         height: 360px;
         width: 360px;
