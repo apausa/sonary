@@ -1,7 +1,7 @@
 /* eslint-disable import/order */
 import React from 'react';
 import logo from './sonary.svg';
-import './Footer.scss';
+import './footerStyles.scss';
 
 export default function Footer() {
   return (
