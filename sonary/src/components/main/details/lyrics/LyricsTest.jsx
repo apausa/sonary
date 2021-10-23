@@ -1,8 +1,8 @@
 import React from 'react';
-import { render, screen } from '../../../utils/test.utils';
+import { render, screen } from '../../../../utils/test.utils';
 import Lyrics from './Lyrics';
-import loadDetails from '../../../redux/actions/details.creator';
-import actionTypes from '../../../redux/actions/actionTypes';
+import loadDetails from '../../../../redux/actions/details.creator';
+import actionTypes from '../../../../redux/actions/actionTypes';
 
 jest.mock('../../../redux/actions/details.creator');
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import { render, screen } from '../../../utils/test.utils';
+import { render, screen } from '../../../../utils/test.utils';
 import Information from './Information';
-import { loadDashboard } from '../../../redux/actions/dashboard.creator';
-import actionTypes from '../../../redux/actions/actionTypes';
+import { loadDashboard } from '../../../../redux/actions/dashboard.creator';
+import actionTypes from '../../../../redux/actions/actionTypes';
 
 jest.mock('../../../redux/actions/dashboard.creator');
 
