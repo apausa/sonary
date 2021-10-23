@@ -41,7 +41,7 @@
     border-radius: 8px;
     padding-left: 8px;
     border: 1px solid $pantoneCoolGray4C;
-    background-color: $pantoneCoolGray2C;
+    background-color: $pantoneCoolGray1C;
     color: $pantoneNeutralBlackC;
 }
 
@@ -90,15 +90,15 @@
 
 .dashboard__search:focus {
     outline: none;
-    background-color: $pantoneCoolGray1C;
+    background-color: $pantoneCoolGray2C;
 }
 
 .dashboard__search:hover {
-    background-color: $pantoneCoolGray1C;
+    background-color: $pantoneCoolGray2C;
 }
 
 .track__element:hover {   
-    background-color: $pantoneCoolGray1C;
+    background-color: $pantoneCoolGray2C;
 }
 
 // Button. 

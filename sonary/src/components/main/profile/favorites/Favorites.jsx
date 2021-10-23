@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useAuth0 } from '@auth0/auth0-react';
-import actionTypes from '../../../redux/actions/actionTypes';
+import actionTypes from '../../../../redux/actions/actionTypes';
 
 export default function Favorites() {
   const favoritesL = useSelector((store) => store.favorites);
