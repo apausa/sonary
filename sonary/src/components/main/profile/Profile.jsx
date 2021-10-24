@@ -4,7 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from './login/LoginButton';
 import Favorites from './favorites/Favorites';
 import User from './user/User';
-import './profile.scss';
+import './profileStyles.scss';
 
 export default function Profile() {
   const { isAuthenticated, isLoading } = useAuth0();

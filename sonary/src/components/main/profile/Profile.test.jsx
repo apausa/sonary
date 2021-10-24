@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import Profile from './Profile';
 import { screen, render } from '../../../utils/test.utils';
-import LogoutButton from './LogoutButton';
+import LogoutButton from './logout/LogoutButton';
 
 const user = {
   email: 'johndoe@me.com',
