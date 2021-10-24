@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-console */
 /* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -8,7 +7,6 @@ import actionTypes from '../../../../redux/actions/actionTypes';
 
 export default function Favorites() {
   const dispatch = useDispatch();
-  const { user, isLoading } = useAuth0();
   const favoritesL = useSelector((store) => store.favorites);
   const [favorites, setCurrentTrack] = useState(favoritesL);
   const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
@@ -16,8 +14,6 @@ export default function Favorites() {
   const getFavClass = (track) => ((favorites
     .some((song) => song === track)) ? 'track__button--true' : '');
   useEffect(() => { setCurrentTrack(favoritesL); }, [favoritesL]);
-
-  if (isLoading) return <div className="profile__loading">Loading...</div>;
   return (
     <ul className="favorites">
       {

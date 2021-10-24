@@ -4,8 +4,7 @@ import LogoutButton from '../logout/LogoutButton';
 
 export default function User() {
   const { user, isLoading } = useAuth0();
-
-  if (isLoading) return <div className="profile__loading">Loading...</div>;
+  if (isLoading) return <div className="loading">Loading...</div>;
   return (
     <aside className="profile__user">
       <div className="user__main">

@@ -9,7 +9,7 @@ import './profileStyles.scss';
 export default function Profile() {
   const { isAuthenticated, isLoading } = useAuth0();
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div className="loading">Loading...</div>;
   return (
     <main className="profile">
       {isAuthenticated
