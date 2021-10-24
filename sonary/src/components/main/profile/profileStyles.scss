@@ -60,8 +60,8 @@
     max-height: 128px;
     margin-bottom: 16px;
     .element__thumbnail {
-        min-width: 128px;
-        height: 128px;
+        max-width: 128px;
+        max-height: 128px;
         border-radius: 8px;
     }
     .element__information {
