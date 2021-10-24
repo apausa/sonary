@@ -17,7 +17,7 @@ export default function Favorites() {
     .some((song) => song === track)) ? 'track__button--true' : '');
   useEffect(() => { setCurrentTrack(favoritesL); }, [favoritesL]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div className="profile__loading">Loading...</div>;
   return (
     <ul className="favorites">
       {

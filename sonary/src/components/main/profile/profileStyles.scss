@@ -7,6 +7,13 @@
     flex-direction: row;
 }
 
+.profile__loading {
+    padding-top: 32px;
+    margin: 0 12.5vw;
+    font-size: 24px;
+    color: $pantoneNeutralBlackC;
+}
+
 // User component.
 
 .profile__user {
