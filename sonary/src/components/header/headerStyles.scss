@@ -1,0 +1,34 @@
+@import "../../utils/variables.scss";
+
+.header {
+    .header__top {
+        height: 64px;
+        width: 100vw;
+        position: fixed;
+        z-index: 1;
+        background-color: #FFF;
+        border-bottom: 1px solid $pantone802C;
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12.5vw;
+    }
+    .header__bottom {
+        height: 64px;
+        width: 100vw;
+    }
+}
+
+.header__sonary {
+    height: 32px;
+    .sonary__icon {
+        height: 32px;
+    }
+}
+
+.profile__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: $pantone802C;
+}

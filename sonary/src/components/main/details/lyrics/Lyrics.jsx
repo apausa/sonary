@@ -1,9 +1,8 @@
-/* eslint-disable no-console */
 /* eslint-disable camelcase */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import loadDetails from '../../../redux/actions/details.creator';
+import loadDetails from '../../../../redux/actions/detailsCreator';
 
 export default function Lyrics() {
   const lyrics = useSelector((store) => store.song);

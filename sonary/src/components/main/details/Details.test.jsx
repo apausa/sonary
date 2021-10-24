@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '../../../utils/test.utils';
 import Details from './Details';
-import loadDetails from '../../../redux/actions/details.creator';
+import loadDetails from '../../../redux/actions/detailsCreator';
 import actionTypes from '../../../redux/actions/actionTypes';
 
-jest.mock('../../../redux/actions/details.creator');
+jest.mock('../../../redux/actions/detailsCreator');
 
 describe('Given a Details component', () => {
   describe('When rendered with certain parameters', () => {

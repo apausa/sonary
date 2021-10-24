@@ -8,9 +8,10 @@ function LoginButton() {
     <button
       data-testid="login"
       type="button"
+      className="login"
       onClick={() => loginWithRedirect()}
     >
-      Log In
+      Login
     </button>
   );
 }

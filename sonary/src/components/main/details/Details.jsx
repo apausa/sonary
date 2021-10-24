@@ -1,6 +1,6 @@
 import React from 'react';
-import Information from './Information';
-import Lyrics from './Lyrics';
+import Information from './information/Information';
+import Lyrics from './lyrics/Lyrics';
 
 export default function Details() {
   return (

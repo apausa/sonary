@@ -1,0 +1,158 @@
+@import "../../../utils/variables.scss";
+
+.profile {
+    padding-top: 32px;
+    margin: 0 12.5vw;
+    display: flex; 
+    flex-direction: row;
+}
+
+.loading {
+    padding-top: 32px;
+    margin: 0 12.5vw;
+    font-size: 24px;
+    color: $pantoneNeutralBlackC;
+}
+
+// User component.
+
+.profile__user {
+    width: 25vw; 
+    padding-right: 10px;
+}
+
+.user__main {
+    border-left: 1px solid $pantoneCoolGray4C;
+    border-right: 1px solid $pantoneCoolGray4C;
+    border-top: 1px solid $pantoneCoolGray4C;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 693px;
+    .main__figure {
+        overflow: hidden;
+        width: 348px;
+        height: 348px;
+        border-radius: 8px;
+    }
+    .main__information {
+        margin: 4px 4px 8px 8px;
+        font-size: 16px;
+        .information__title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .information__mail {
+            font-size: 24px;
+            font-weight: normal;
+        }
+    }
+}
+
+// Favorites component.
+
+.favorites {
+    margin-left: 4px;
+    max-width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.track__element {   
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid $pantoneCoolGray4C;
+    width: 24.3vw;
+    max-height: 128px;
+    margin-bottom: 16px;
+    .element__thumbnail {
+        max-width: 128px;
+        max-height: 128px;
+        border-radius: 8px;
+    }
+    .element__information {
+        height: 128px;
+        padding: 4px 32px 16px 8px;
+        overflow: hidden;
+        .information__track {
+            font-weight: bold;
+            font-size: 16px;
+            color: $pantoneNeutralBlackC;
+        }
+        .information__artist {
+            margin-top: 4px;
+            font-weight: normal;
+            font-size: 16px;
+            color: $pantoneNeutralBlackC;
+        }
+    }
+}
+
+.track__element:hover {
+    background-color: $pantoneCoolGray2C;
+}
+
+.track__button {
+    position: absolute;
+    margin-left: 22.3vw;
+    margin-top: 4px;
+    width: 24px;
+    height: 24px; 
+    border-radius: 8px;
+    background-color: #FFF;
+    border: 1px solid $pantoneCoolGray4C;
+    color: $pantoneNeutralBlackC;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.track__button:hover {
+    background-color: $pantoneCoolGray1C;
+}
+
+.track__button--true{
+    background-color: $pantone802C;
+    color: $pantoneNeutralBlackC;
+}
+
+.track__button--true:hover {
+    background-color: $pantone802C;
+    color: $pantoneNeutralBlackC;
+}
+
+// Login component.
+
+.login {
+    height: 32px;
+    width: 128px; 
+    border-radius: 8px;
+    background-color: #FFF;
+    border: 1px solid $pantoneNeutralBlackC;
+    color: $pantoneNeutralBlackC;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.login:hover {
+    background-color: $pantone802C;
+}
+
+// Logout.
+
+.logout {
+    margin-top: 32px;
+    height: 32px;
+    width: 128px; 
+    border-radius: 8px;
+    background-color: #FFF;
+    border: 1px solid $pantoneNeutralBlackC;
+    color: $pantoneNeutralBlackC;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.logout:hover {
+    background-color: $pantone802C;
+}

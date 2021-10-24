@@ -1,10 +1,10 @@
 import React from 'react';
+import './notFoundStyles.scss';
 
-export default function notFound() {
-  return (
-    <footer>
-      <h1>Not Found</h1>
-    </footer>
+const NotFound = () => (
+  <h1 className="notFound">
+    404, the page doesn´t exist.
+  </h1>
+);
 
-  );
-}
+export default NotFound;

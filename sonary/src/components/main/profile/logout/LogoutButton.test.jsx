@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import LoginButton from './LoginButton';
-import { screen, render } from '../../../utils/test.utils';
+import LoginButton from '../login/LoginButton';
+import { screen, render } from '../../../../utils/test.utils';
 import LogoutButton from './LogoutButton';
 
 const user = {
