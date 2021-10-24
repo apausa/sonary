@@ -1,5 +1,5 @@
 # sonary
 
-Sonary is a Frontend application where users can read, save and filter today’s most popular song lyrics. Made with JavaScript.
+Sonary. Frontend application where users can read, save and filter today’s most popular song lyrics. Features React and Redux, made with JavaScript and SCSS.
 
-Features React and Redux. Fetching data from MusixMatch’s API. With 80% coverage.
+Fetching data from MusixMatch’s API. With 80% coverage.
