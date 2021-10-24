@@ -3,7 +3,8 @@ import actionTypes from '../actions/actionTypes';
 export default function sonaryReducer(state = [], action) {
   let sonary = state;
   if (action.type === actionTypes.LOAD_DASHBOARD) {
-    sonary = action.dashboard?.map(({ track }) => track);
+    const dashboard = action.dashboard?.map(({ track }) => track);
+    sonary = dashboard;
   }
   return sonary;
 }
