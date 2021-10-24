@@ -50,16 +50,14 @@ export default function Dashboard() {
               return (
                 <li key={track.track_id} className="bottom__track">
                   <ul>
-                    <li className="track__button">
-                      <button
-                        data-testid={`button-${track.track_id}`}
-                        type="button"
-                        className={`button__fav ${getFavClass(track)}`}
-                        onClick={() => toggleFav(track)}
-                      >
-                        +
-                      </button>
-                    </li>
+                    <button
+                      data-testid={`button-${track.track_id}`}
+                      type="button"
+                      className={`button__fav ${getFavClass(track)}`}
+                      onClick={() => toggleFav(track)}
+                    >
+                      +
+                    </button>
                     <Link className="track__element" to={`/details/${track.track_id}`}>
                       <li className="element__thumbnail" style={{ backgroundColor: `#${randomColor()}` }}>
                         <img src="" alt="" />
