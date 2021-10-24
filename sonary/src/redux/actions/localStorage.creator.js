@@ -4,8 +4,6 @@ export function saveFavouritesToLocalStorage(favorites) {
 }
 export function initializeLocalStorage() {
   favouriteTracks = JSON.parse(localStorage.getItem('favouriteTracks'));
-  if (!favouriteTracks) {
-    favouriteTracks = [];
-  }
+  if (!favouriteTracks) favouriteTracks = [];
   return favouriteTracks;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 /* eslint-disable camelcase */
 
 import actionTypes from '../actions/actionTypes';
@@ -13,8 +14,6 @@ export default function favoriteReducer(favorites = initializeLocalStorage(), ac
       break;
     case actionTypes.TOGGLE_FAVORITES:
       track = action.track;
-
-      // eslint-disable-next-line no-case-declarations
       const favoritesIds = favorites.map(({ track_id }) => track_id);
       if (favoritesIds.some((id) => id === track.track_id)) {
         newState = favorites.filter((currentTrack) => currentTrack.track_id !== track.track_id);

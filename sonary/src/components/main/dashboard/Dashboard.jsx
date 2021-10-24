@@ -8,21 +8,15 @@ import { loadDashboard } from '../../../redux/actions/dashboard.creator';
 import './dashboardStyles.scss';
 
 export default function Dashboard() {
+  const dispatch = useDispatch();
   const { tracks, favoriteTracks } = useSelector((store) => ({
     tracks: store.sonary,
     favoriteTracks: store.favorites
   }));
 
-  const dispatch = useDispatch();
   const [filteredSongs, setFilterSong] = useState();
   const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
-
-  function toggleFav(track) {
-    dispatch({
-      type: actionTypes.TOGGLE_FAVORITES,
-      track
-    });
-  }
+  const toggleFav = (track) => dispatch({ type: actionTypes.TOGGLE_FAVORITES, track });
 
   function getFavClass(track) {
     const isFav = favoriteTracks.some((song) => song === track);
@@ -40,13 +34,8 @@ export default function Dashboard() {
     }
   }
 
-  useEffect(() => {
-    if (!tracks.length) dispatch(loadDashboard());
-  }, []);
-
-  useEffect(() => {
-    setFilterSong(tracks || []);
-  }, [tracks]);
+  useEffect(() => { if (!tracks.length) dispatch(loadDashboard()); }, []);
+  useEffect(() => { setFilterSong(tracks || []); }, [tracks]);
 
   let ranking = 0;
   return (

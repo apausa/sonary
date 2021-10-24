@@ -2,17 +2,8 @@ import actionTypes from '../actions/actionTypes';
 
 export default function sonaryReducer(state = [], action) {
   let sonary = state;
-  switch (action.type) {
-    case actionTypes.LOAD_DASHBOARD:
-      sonary = state;
-      sonary = action.dashboard.map(({
-        track
-      }) => track);
-      break;
-
-    default:
-      break;
+  if (action.type === actionTypes.LOAD_DASHBOARD) {
+    sonary = action.dashboard?.map(({ track }) => track);
   }
-
   return sonary;
 }
