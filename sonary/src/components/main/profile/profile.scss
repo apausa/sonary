@@ -1,136 +1,118 @@
-$gris5: #F2F2F2;
-$gris10:#E5E5E5;
-$gris15:#DADADA;
-$gris95:rgb(38, 38, 38);
-$gris90:#575757;
-$verde: rgb(0, 229.5, 0);
-
-
-.user {
-    .user__title {
-        font-size: 30px;
-    }
-    
-    .favorites {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
+@import "../../../utils/variables.scss";
 
 .profile {
-    display: flex;
-    margin: 40px 160px 0px 160px;
-    width: 360px; 
-    height: 580px;
-    background-color: $gris5;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    .user__image {
-        height: 360px;
-        width: 360px;
-        border-radius: 10px;
-        background-color: $gris15;
+    padding-top: 32px;
+    margin: 0 12.5vw;
+    display: flex; 
+    flex-direction: row;
+}
+
+// User component.
+
+.profile__user {
+    width: 25vw; 
+    padding-right: 10px;
+}
+
+.user__main {
+    border-left: 1px solid $pantoneCoolGray4C;
+    border-right: 1px solid $pantoneCoolGray4C;
+    border-top: 1px solid $pantoneCoolGray4C;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 725px;
+    .main__figure {
+        overflow: hidden;
+        width: 348px;
+        height: 348px;
+        border-radius: 8px;
+    }
+    .main__information {
+        margin: 4px 4px 8px 8px;
+        font-size: 16px;
+        .information__title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .information__mail {
+            font-size: 24px;
+            font-weight: normal;
+        }
     }
 }
 
-.user__information {
-    margin: 10px 10px 20px 15px;
-    font-size: 20px;
-}
-
-.information__name {
-    font-weight: bold;
-    font-size: 20px;
-}
+// Favorites component.
 
 .favorites {
-    margin-left: 20px;
-    .favorites__title {
-        font-size: 30px;
-    }
-    .favorites__list {
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        width: 740px;
-        justify-content: space-between;
-    }
-}
-
-.favorites__track {
-    background-color: $gris5;
-    width: 360px;
-    height: 160px;
-    border-radius: 10px; 
+    margin-left: 4px;
+    max-width: 50vw;
     display: flex;
-    margin: 10px 0px 10px 0px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
 }
 
-.favorites__track:hover {
-    background-color: $gris10;
-    .information__track {
-        background-color: $gris10;
+.track__element {   
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid $pantoneCoolGray4C;
+    width: 24.4vw;
+    max-height: 128px;
+    margin-bottom: 16px;
+    .element__thumbnail {
+        min-width: 128px;
+        height: 128px;
+        border-radius: 8px;
     }
-    
-    .information__artist {
-        background-color: $gris10;
+    .element__information {
+        height: 128px;
+        padding: 4px 32px 16px 8px;
+        overflow: hidden;
+        .information__track {
+            font-weight: bold;
+            font-size: 16px;
+            color: $pantoneNeutralBlackC;
+        }
+        .information__artist {
+            margin-top: 4px;
+            font-weight: normal;
+            font-size: 16px;
+            color: $pantoneNeutralBlackC;
+        }
     }
-    
 }
 
-.favorites__thumbnail {
-    width: 160px;
-    height: 160px;
-    min-width: 160px;
-    background-color: $gris15;
-    border-radius: 10px; 
+.track__element:hover {
+    background-color: $pantoneCoolGray2C;
 }
 
-.list__button--fav{
-    background-color: $verde;
+.track__button {
     position: absolute;
-}
-
-.favorites__information {
-    display: flex; 
-    flex-direction: column;
-    justify-content: flex-end;
-    margin: 10px 0px 20px 15px;
-    overflow: scroll;
-    font-size: 10px;
-    .information__track {
-        background-color: $gris5;
-        color: $gris95;
-        font-size: 20px;
-        border: 0;
-        font-weight: bold;
-    }
-    .information__artist {
-        background-color: $gris5;
-        color: $gris90; 
-        font-size: 20px;
-        border: 0;
-        font-weight: bold;
-    }
-}
-
-// Input change color.
-
-.logout {
-    width: 60px;
-    height: 25px; 
-    border-radius: 12.5px;
-    border: solid 1px $gris95;
-    background-color: $gris5;
-    margin: 120px 0px 0px 270px;
+    margin-left: 22.3vw;
+    margin-top: 4px;
+    width: 24px;
+    height: 24px; 
+    border-radius: 8px;
+    border: none;
+    background-color: #FFF;
+    border: 1px solid $pantoneCoolGray4C;
+    color: $pantoneCoolGray8C;
     font-weight: bold;
-
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
 }
 
-.logout:hover {
-    background-color: $gris10;
+.track__button:hover {
+    background-color: $pantoneCoolGray1C;
 }
 
-.logout:active {
-    background-color: $verde;
+.track__button--true{
+    background-color: $pantone802C;
+    color: $pantoneCoolGray8C;
+}
+
+.track__button--true:hover {
+    background-color: $pantone802C;
+    color: $pantoneCoolGray8C;
 }

@@ -9,6 +9,7 @@ export default function Favorites() {
   const favoritesL = useSelector((store) => store.favorites);
   const dispatch = useDispatch();
   const [favorites, setCurrentTrack] = useState(favoritesL);
+  // eslint-disable-next-line no-unused-vars
   const { user, isLoading } = useAuth0();
   const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
 
@@ -28,65 +29,36 @@ export default function Favorites() {
 
   function getFavClass(track) {
     const isFav = favorites.some((song) => song === track);
-    return isFav ? 'list__button--fav' : '';
-  }
-
-  function trackChange(event, trackId) {
-    let updatedFavorites;
-    setCurrentTrack(
-      updatedFavorites = favorites.map((track) => (track.track_id === trackId
-        ? { ...track, [event.target.name]: event.target.value } : track))
-    );
-    return updatedFavorites;
+    return isFav ? 'track__button--true' : '';
   }
 
   return (
-    <div className="favorites">
-      <h2 className="favorites__title">{user.name}</h2>
-      <ul className="favorites__list">
-        {
-              favorites.map((track) => (
-                <li className="favorites__track" key={track.track_id}>
-                  <ul>
-                    <li><figure className="favorites__thumbnail" style={{ backgroundColor: `#${randomColor()}` }} /></li>
-                  </ul>
-                  <ul className="favorites__information">
-                    <li>
-                      <input
-                        className="information__track"
-                        type="text"
-                        name="track_name"
-                        placeholder="track_name"
-                        value={track.track_name}
-                        onChange={(event) => trackChange(event, track.track_id)}
-                      />
-                    </li>
-                    <li>
-                      <input
-                        className="information__artist"
-                        type="text"
-                        name="artist_name"
-                        placeholder="artist_name"
-                        value={track.artist_name}
-                        onChange={(event) => trackChange(event, track.track_id)}
-                      />
-                    </li>
-
-                  </ul>
-                  <button
-                    type="button"
-                    className={`list__button ${getFavClass(track)}`}
-                    onClick={() => toggleFav(track)}
-                  >
-                    +
-                  </button>
-                </li>
-              ))
-          }
-
-      </ul>
-
-    </div>
-
+    <ul className="favorites">
+      {
+        favorites.map((track) => (
+          <li className="track__element" key={track.track_id}>
+            <ul>
+              <li>
+                <figure
+                  className="element__thumbnail"
+                  style={{ backgroundColor: `#${randomColor()}` }}
+                />
+              </li>
+            </ul>
+            <ul className="element__information">
+              <li className="information__track">{track.track_name}</li>
+              <li className="information__artist">{track.artist_name}</li>
+            </ul>
+            <button
+              type="button"
+              className={`track__button ${getFavClass(track)}`}
+              onClick={() => toggleFav(track)}
+            >
+              +
+            </button>
+          </li>
+        ))
+      }
+    </ul>
   );
 }

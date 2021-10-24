@@ -10,16 +10,18 @@ export default function User() {
   }
 
   return (
-    <aside className="user">
-      <img className="user__image" src={user.picture} alt={user.name} />
-      <div className="user__information">
-        <div>
-          <h2 className="information__name">{user.name}</h2>
-          <p className="information__mail">
-            {user.email}
-          </p>
+    <aside className="profile__user">
+      <div className="user__main">
+        <img className="main__figure" src={user.picture} alt={user.name} />
+        <div className="main__information">
+          <div>
+            <h2 className="information__title">{user.name}</h2>
+            <p className="information__mail">
+              {user.email}
+            </p>
+          </div>
+          <LogoutButton />
         </div>
-        <LogoutButton />
       </div>
     </aside>
   );

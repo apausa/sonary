@@ -9,21 +9,17 @@ import './profile.scss';
 export default function Profile() {
   const { isAuthenticated, isLoading } = useAuth0();
 
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
+  if (isLoading) return <div>Loading...</div>;
   return (
-    isAuthenticated
-      ? (
-        <main className="profile">
-          <User />
-          <Favorites />
-        </main>
-      )
-      : (
-        <main>
-          <LoginButton />
-        </main>
-      )
+    <main className="profile">
+      {isAuthenticated
+        ? (
+          <>
+            <User />
+            <Favorites />
+          </>
+        )
+        : <LoginButton />}
+    </main>
   );
 }
