@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { loadDashboard } from '../../../../redux/actions/dashboard.creator';
+import { loadDashboard } from '../../../../redux/actions/dashboardCreator';
 import '../detailsStyles.scss';
 
 export default function Information() {

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import sonaryReducer from './sonary.reducer';
-import songReducer from './song.reducer';
-import favoriteReducer from './favoriteReducer';
+import dashboardReducer from './dashboardReducer';
+import detailsReducer from './detailsReducer';
+import profileReducer from './profileReducer';
 
 export default combineReducers({
-  sonary: sonaryReducer,
-  song: songReducer,
-  favorites: favoriteReducer
+  sonary: dashboardReducer,
+  song: detailsReducer,
+  favorites: profileReducer
 });

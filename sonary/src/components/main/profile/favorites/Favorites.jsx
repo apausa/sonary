@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
@@ -6,32 +7,17 @@ import { useAuth0 } from '@auth0/auth0-react';
 import actionTypes from '../../../../redux/actions/actionTypes';
 
 export default function Favorites() {
-  const favoritesL = useSelector((store) => store.favorites);
   const dispatch = useDispatch();
-  const [favorites, setCurrentTrack] = useState(favoritesL);
-  // eslint-disable-next-line no-unused-vars
   const { user, isLoading } = useAuth0();
+  const favoritesL = useSelector((store) => store.favorites);
+  const [favorites, setCurrentTrack] = useState(favoritesL);
   const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
+  const toggleFav = (track) => dispatch({ type: actionTypes.TOGGLE_FAVORITES, track });
+  const getFavClass = (track) => ((favorites
+    .some((song) => song === track)) ? 'track__button--true' : '');
+  useEffect(() => { setCurrentTrack(favoritesL); }, [favoritesL]);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  useEffect(() => {
-    setCurrentTrack(favoritesL);
-  }, [favoritesL]);
-  function toggleFav(track) {
-    dispatch({
-      type: actionTypes.TOGGLE_FAVORITES,
-      track
-    });
-  }
-
-  function getFavClass(track) {
-    const isFav = favorites.some((song) => song === track);
-    return isFav ? 'track__button--true' : '';
-  }
-
+  if (isLoading) return <div>Loading...</div>;
   return (
     <ul className="favorites">
       {

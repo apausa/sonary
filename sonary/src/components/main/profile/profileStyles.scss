@@ -20,7 +20,7 @@
     border-top: 1px solid $pantoneCoolGray4C;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    height: 725px;
+    height: 693px;
     .main__figure {
         overflow: hidden;
         width: 348px;
@@ -93,11 +93,9 @@
     width: 24px;
     height: 24px; 
     border-radius: 8px;
-    border: none;
     background-color: #FFF;
     border: 1px solid $pantoneCoolGray4C;
-    color: $pantoneCoolGray8C;
-    font-weight: bold;
+    color: $pantoneNeutralBlackC;
     font-size: 24px;
     line-height: 24px;
     text-align: center;
@@ -109,10 +107,45 @@
 
 .track__button--true{
     background-color: $pantone802C;
-    color: $pantoneCoolGray8C;
+    color: $pantoneNeutralBlackC;
 }
 
 .track__button--true:hover {
     background-color: $pantone802C;
-    color: $pantoneCoolGray8C;
+    color: $pantoneNeutralBlackC;
+}
+
+// Login component.
+
+.login {
+    height: 32px;
+    width: 128px; 
+    border-radius: 8px;
+    background-color: #FFF;
+    border: 1px solid $pantoneNeutralBlackC;
+    color: $pantoneNeutralBlackC;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.login:hover {
+    background-color: $pantone802C;
+}
+
+// Logout.
+
+.logout {
+    margin-top: 32px;
+    height: 32px;
+    width: 128px; 
+    border-radius: 8px;
+    background-color: #FFF;
+    border: 1px solid $pantoneNeutralBlackC;
+    color: $pantoneNeutralBlackC;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.logout:hover {
+    background-color: $pantone802C;
 }

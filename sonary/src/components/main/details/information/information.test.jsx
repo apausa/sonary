@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '../../../../utils/test.utils';
 import Information from './Information';
-import { loadDashboard } from '../../../../redux/actions/dashboard.creator';
+import { loadDashboard } from '../../../../redux/actions/dashboardCreator';
 import actionTypes from '../../../../redux/actions/actionTypes';
 
-jest.mock('../../../redux/actions/dashboard.creator');
+jest.mock('../../../redux/actions/dashboardCreator');
 
 describe('Given a Information component', () => {
   describe('When rendered with certain parameters', () => {

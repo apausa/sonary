@@ -1,4 +1,5 @@
 let favouriteTracks;
+
 export function saveFavouritesToLocalStorage(favorites) {
   localStorage.setItem('favouriteTracks', JSON.stringify(favorites));
 }

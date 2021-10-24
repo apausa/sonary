@@ -113,8 +113,7 @@
     border: none;
     background-color: #FFF;
     border: 1px solid $pantoneCoolGray4C;
-    color: $pantoneCoolGray8C;
-    font-weight: bold;
+    color: $pantoneNeutralBlackC;
     font-size: 24px;
     line-height: 24px;
     text-align: center;
@@ -126,10 +125,10 @@
 
 .button__fav--yes{
     background-color: $pantone802C;
-    color: $pantoneCoolGray8C;
+    color: $pantoneNeutralBlackC;
 }
 
 .button__fav--yes:hover {
     background-color: $pantone802C;
-    color: $pantoneCoolGray8C;
+    color: $pantoneNeutralBlackC;
 }
